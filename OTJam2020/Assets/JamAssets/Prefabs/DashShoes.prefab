@@ -147,7 +147,7 @@ MonoBehaviour:
   m_type: 1
   m_ready: 1
   spriteObject: {fileID: 1254186734898092285}
-  m_rechargeTime: 5
+  m_rechargeTime: 3
 --- !u!50 &1254186734399238884
 Rigidbody2D:
   serializedVersion: 4
@@ -156,7 +156,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254186734399238880}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
