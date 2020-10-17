@@ -104,15 +104,15 @@ public class Player : MonoBehaviour
     }
 
     public void FixedUpdate() {
-        Collider2D other = Physics2D.OverlapBox(new Vector2(this.transform.position.x, this.transform.position.y) + Vector2.down * 0.55f, new Vector2(0.9f, 0.05f), 0);
+        Collider2D other = Physics2D.OverlapBox(new Vector2(this.transform.position.x, this.transform.position.y) + Vector2.down * 0.55f, new Vector2(0.9f, 0.05f), 0, LayerMask.GetMask("World"));
         if (other) {
             m_grounded = true;
         } else {
             m_grounded = false;
         }
 
-        m_otherR = Physics2D.OverlapBox(new Vector2(this.transform.position.x, this.transform.position.y) + Vector2.right * 0.53f, new Vector2(0.01f, 0.9f), 0);
-        m_otherL = Physics2D.OverlapBox(new Vector2(this.transform.position.x, this.transform.position.y) + Vector2.right * -0.53f, new Vector2(0.01f, 0.9f), 0);
+        m_otherR = Physics2D.OverlapBox(new Vector2(this.transform.position.x, this.transform.position.y) + Vector2.right * 0.53f, new Vector2(0.01f, 0.7f), 0, LayerMask.GetMask("World"));
+        m_otherL = Physics2D.OverlapBox(new Vector2(this.transform.position.x, this.transform.position.y) + Vector2.right * -0.53f, new Vector2(0.01f, 0.7f), 0, LayerMask.GetMask("World"));
 
         Vector2 vel = m_rigidBody.velocity;
         switch (m_state) {
