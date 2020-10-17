@@ -25,61 +25,61 @@ TextureImporter:
     second: Achilles_Idle3
   - first:
       213: -8531466241245463209
-    second: Achilles_7
+    second: Achilles_Walk0
   - first:
       213: 6851170302666072638
-    second: Achilles_8
+    second: Achilles_Walk1
   - first:
       213: 4883024820737306494
-    second: Achilles_9
+    second: Achilles_Walk2
   - first:
       213: -6189487966197900150
-    second: Achilles_10
+    second: Achilles_Walk3
   - first:
       213: -5163280917363685841
-    second: Achilles_11
+    second: Achilles_Walk4
   - first:
       213: 855544707286235851
-    second: Achilles_12
+    second: Achilles_Walk5
   - first:
       213: 4283465998279913673
-    second: Achilles_13
+    second: Achilles_Walk6
   - first:
       213: -80017660079099667
-    second: Achilles_14
+    second: Achilles_Dash0
   - first:
       213: -7193724737771606813
-    second: Achilles_15
+    second: Achilles_Dash1
   - first:
       213: -8633119103991067566
-    second: Achilles_16
+    second: Achilles_Dash2
   - first:
       213: -6987579878196626252
-    second: Achilles_17
+    second: Achilles_Dash3
   - first:
       213: 3304336249417818242
-    second: Achilles_18
+    second: Achilles_Dash4
   - first:
       213: -3488859627657445244
-    second: Achilles_19
+    second: Achilles_Slide0
   - first:
       213: 4452559391964186117
-    second: Achilles_20
+    second: Achilles_Slide1
   - first:
       213: -4122565140963858240
-    second: Achilles_21
+    second: Achilles_Die0
   - first:
       213: 8287501213909647996
-    second: Achilles_22
+    second: Achilles_Die1
   - first:
       213: -8096314744938572359
-    second: Achilles_23
+    second: Achilles_Die2
   - first:
       213: 6918765111799353703
-    second: Achilles_24
+    second: Achilles_Die3
   - first:
       213: 3241961821520096741
-    second: Achilles_25
+    second: Achilles_Die4
   - first:
       213: 6634686520280716917
     second: Achilles_26
@@ -372,7 +372,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Achilles_7
+      name: Achilles_Walk0
       rect:
         serializedVersion: 2
         x: 1
@@ -393,7 +393,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Achilles_8
+      name: Achilles_Walk1
       rect:
         serializedVersion: 2
         x: 18
@@ -414,7 +414,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Achilles_9
+      name: Achilles_Walk2
       rect:
         serializedVersion: 2
         x: 35
@@ -435,7 +435,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Achilles_10
+      name: Achilles_Walk3
       rect:
         serializedVersion: 2
         x: 52
@@ -456,7 +456,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Achilles_11
+      name: Achilles_Walk4
       rect:
         serializedVersion: 2
         x: 69
@@ -477,7 +477,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Achilles_12
+      name: Achilles_Walk5
       rect:
         serializedVersion: 2
         x: 86
@@ -498,7 +498,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Achilles_13
+      name: Achilles_Walk6
       rect:
         serializedVersion: 2
         x: 103
@@ -519,7 +519,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Achilles_14
+      name: Achilles_Dash0
       rect:
         serializedVersion: 2
         x: 1
@@ -540,7 +540,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Achilles_15
+      name: Achilles_Dash1
       rect:
         serializedVersion: 2
         x: 18
@@ -561,7 +561,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Achilles_16
+      name: Achilles_Dash2
       rect:
         serializedVersion: 2
         x: 35
@@ -582,7 +582,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Achilles_17
+      name: Achilles_Dash3
       rect:
         serializedVersion: 2
         x: 52
@@ -603,7 +603,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Achilles_18
+      name: Achilles_Dash4
       rect:
         serializedVersion: 2
         x: 69
@@ -624,7 +624,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Achilles_19
+      name: Achilles_Slide0
       rect:
         serializedVersion: 2
         x: 1
@@ -645,7 +645,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Achilles_20
+      name: Achilles_Slide1
       rect:
         serializedVersion: 2
         x: 18
@@ -666,7 +666,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Achilles_21
+      name: Achilles_Die0
       rect:
         serializedVersion: 2
         x: 1
@@ -687,7 +687,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Achilles_22
+      name: Achilles_Die1
       rect:
         serializedVersion: 2
         x: 18
@@ -708,7 +708,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Achilles_23
+      name: Achilles_Die2
       rect:
         serializedVersion: 2
         x: 35
@@ -729,7 +729,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Achilles_24
+      name: Achilles_Die3
       rect:
         serializedVersion: 2
         x: 52
@@ -750,7 +750,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Achilles_25
+      name: Achilles_Die4
       rect:
         serializedVersion: 2
         x: 69

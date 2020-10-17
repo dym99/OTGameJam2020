@@ -6,7 +6,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Rigidbody2D m_rigidBody;
-
+    public SpriteRenderer m_sprite;
+    public Animator m_animator;
 
     public float m_maxSpeed = 6.0f;
     public float m_acceleration = 24.0f;
@@ -59,6 +60,7 @@ public class Player : MonoBehaviour
                         }
                     }
                     m_rigidBody.velocity = vel;
+                    m_animator.SetTrigger("Jump");
                 }
                 if (Input.GetButtonDown("Dash")) {
                     if (m_hasDash && m_xSpeedTarget != 0.0f) {
@@ -88,6 +90,7 @@ public class Player : MonoBehaviour
                     m_state = PlayerState.NORMAL;
                     m_slideOnCooldown = true;
                     StartCoroutine(WallHopRoutine());
+                    m_animator.SetTrigger("Jump");
                 }
                 if (Input.GetButtonDown("Dash") && m_hasDash) {
                     m_hasDash = false;
@@ -104,33 +107,54 @@ public class Player : MonoBehaviour
     }
 
     public void FixedUpdate() {
-        Collider2D other = Physics2D.OverlapBox(new Vector2(this.transform.position.x, this.transform.position.y) + Vector2.down * 0.55f, new Vector2(0.9f, 0.05f), 0, LayerMask.GetMask("World"));
+        Collider2D other = Physics2D.OverlapBox(new Vector2(this.transform.position.x, this.transform.position.y) + Vector2.down * 0.55f, new Vector2(0.8f, 0.05f), 0, LayerMask.GetMask("World"));
         if (other) {
             m_grounded = true;
         } else {
             m_grounded = false;
         }
 
-        m_otherR = Physics2D.OverlapBox(new Vector2(this.transform.position.x, this.transform.position.y) + Vector2.right * 0.53f, new Vector2(0.01f, 0.7f), 0, LayerMask.GetMask("World"));
-        m_otherL = Physics2D.OverlapBox(new Vector2(this.transform.position.x, this.transform.position.y) + Vector2.right * -0.53f, new Vector2(0.01f, 0.7f), 0, LayerMask.GetMask("World"));
+        m_otherR = Physics2D.OverlapBox(new Vector2(this.transform.position.x, this.transform.position.y) + Vector2.right * 0.47f, new Vector2(0.05f, 0.7f), 0, LayerMask.GetMask("World"));
+        m_otherL = Physics2D.OverlapBox(new Vector2(this.transform.position.x, this.transform.position.y) + Vector2.right * -0.47f, new Vector2(0.05f, 0.7f), 0, LayerMask.GetMask("World"));
 
         Vector2 vel = m_rigidBody.velocity;
         switch (m_state) {
             case PlayerState.NORMAL:
                 NormalPhysicsUpdate();
+                
+                if (m_xSpeedTarget > 0) {
+                    m_sprite.flipX = false;
+                } else if (m_xSpeedTarget < 0) {
+                    m_sprite.flipX = true;
+                }
+
+                m_animator.SetTrigger("Normal");
                 break;
             case PlayerState.DASHING:
                 vel.y = 0;
                 m_rigidBody.velocity = vel;
+
+                m_animator.SetTrigger("Dash");
                 break;
             case PlayerState.WALLSLIDE:
                 WallSlideUpdate();
+                if (m_otherL) {
+                    m_sprite.flipX = true;
+                } else if (m_otherR) {
+                    m_sprite.flipX = false;
+                }
+                m_animator.SetTrigger("WallSlide");
                 break;
             case PlayerState.WALLDASHING:
                 vel.x = 0;
                 m_rigidBody.velocity = vel;
+
+                m_animator.SetTrigger("WallDash");
                 break;
         }
+
+        m_animator.SetBool("Grounded", m_grounded);
+        m_animator.SetFloat("xSpeed", Mathf.Abs(m_rigidBody.velocity.x));
     }
 
     private IEnumerator DashRoutine() {

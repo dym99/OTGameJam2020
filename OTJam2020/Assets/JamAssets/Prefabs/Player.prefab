@@ -110,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.98, y: 0.98}
+  m_Size: {x: 0.85, y: 0.98}
   m_EdgeRadius: 0.01
 --- !u!50 &5246400090991162053
 Rigidbody2D:
@@ -146,6 +146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rigidBody: {fileID: 5246400090991162053}
+  m_sprite: {fileID: 5246400090991162059}
+  m_animator: {fileID: 2054191778}
   m_maxSpeed: 6
   m_acceleration: 24
   m_jumpSpeed: 9.5
