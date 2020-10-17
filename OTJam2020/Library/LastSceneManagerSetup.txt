@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/JamAssets/Scenes/TestScene.unity
+- path: Assets/JamAssets/Scenes/Levels/Level1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
