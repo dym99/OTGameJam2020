@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: testtile
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: ea6936e0643f1764cb541dc8952cee16, type: 3}
+  m_Sprite: {fileID: -5903555518076435603, guid: c97c798fb94f6064c8e3f83336bab29b,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
