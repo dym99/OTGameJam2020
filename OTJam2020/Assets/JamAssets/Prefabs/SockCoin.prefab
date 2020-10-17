@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5822548727133775041}
   - component: {fileID: 9007391467963799216}
   - component: {fileID: 2147898515321967497}
+  - component: {fileID: 5338510993251832535}
   m_Layer: 0
   m_Name: SockCoin
   m_TagString: Untagged
@@ -141,3 +142,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5338510993251832535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5822548727133775042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0e092cf6b1498240833bf283533d429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_coinEffect: {fileID: 3162921145729958982, guid: cc88a7f3faef3d04aa83b83b3643205e,
+    type: 3}
+  m_score: 1000
