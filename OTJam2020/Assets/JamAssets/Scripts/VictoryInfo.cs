@@ -8,6 +8,6 @@ public class VictoryInfo : MonoBehaviour
     public TMP_Text m_text;
 
     public void OnEnable() {
-        m_text.text = $"Level Score: {LevelManager.currentLevel.levelScore}\nTotal Score: {GameManager.instance.totalScore}";
+        m_text.text = $"Time Bonus: {LevelManager.currentLevel.m_timeBonus}\nLevel Score: {LevelManager.currentLevel.levelScore}\nTotal Score: {GameManager.instance.totalScore}";
     }
 }
