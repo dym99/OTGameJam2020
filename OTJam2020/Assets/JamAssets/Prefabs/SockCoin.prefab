@@ -157,3 +157,4 @@ MonoBehaviour:
   m_coinEffect: {fileID: 3162921145729958982, guid: cc88a7f3faef3d04aa83b83b3643205e,
     type: 3}
   m_score: 1000
+  m_audioPlayer: {fileID: 0}

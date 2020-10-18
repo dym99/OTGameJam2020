@@ -5,7 +5,6 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     public GameObject m_coinEffect;
-    public int m_score = 1000;
 
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -15,6 +14,7 @@ public class Coin : MonoBehaviour
             go.transform.position = this.transform.position;
             Destroy(go, 1.0f);
             Destroy(this.gameObject);
+            LevelManager.currentLevel.ScorePoints(1000);
         }
     }
 }

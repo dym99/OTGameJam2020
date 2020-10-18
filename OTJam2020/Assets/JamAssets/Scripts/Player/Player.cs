@@ -9,6 +9,11 @@ public class Player : MonoBehaviour
     public SpriteRenderer m_sprite;
     public Animator m_animator;
 
+    public AudioSource m_audioSource;
+
+    public AudioClip m_jumpSound;
+    public AudioClip m_dashSound;
+
     public float m_maxSpeed = 6.0f;
     public float m_acceleration = 24.0f;
     public float m_jumpSpeed = 9.5f;
@@ -53,14 +58,19 @@ public class Player : MonoBehaviour
                     Vector2 vel = m_rigidBody.velocity;
                     if (m_grounded) {
                         vel.y = m_jumpSpeed;
+                        m_animator.SetTrigger("Jump");
+                        m_audioSource.clip = m_jumpSound;
+                        m_audioSource.Play();
                     } else {
                         if (m_hasDoubleJump) {
                             vel.y = m_jumpSpeed;
                             m_hasDoubleJump = false;
+                            m_animator.SetTrigger("Jump");
+                            m_audioSource.clip = m_jumpSound;
+                            m_audioSource.Play();
                         }
                     }
                     m_rigidBody.velocity = vel;
-                    m_animator.SetTrigger("Jump");
                 }
                 if (Input.GetButtonDown("Dash")) {
                     if (m_hasDash && m_xSpeedTarget != 0.0f) {
@@ -72,6 +82,8 @@ public class Player : MonoBehaviour
                         m_rigidBody.velocity = vel;
                         m_state = PlayerState.DASHING;
                         StartCoroutine(DashRoutine());
+                        m_audioSource.clip = m_dashSound;
+                        m_audioSource.Play();
                     }
                 }
                 break;
@@ -91,6 +103,8 @@ public class Player : MonoBehaviour
                     m_slideOnCooldown = true;
                     StartCoroutine(WallHopRoutine());
                     m_animator.SetTrigger("Jump");
+                    m_audioSource.clip = m_jumpSound;
+                    m_audioSource.Play();
                 }
                 if (Input.GetButtonDown("Dash") && m_hasDash) {
                     m_hasDash = false;
@@ -101,6 +115,8 @@ public class Player : MonoBehaviour
                     m_rigidBody.velocity = vel;
                     m_state = PlayerState.WALLDASHING;
                     StartCoroutine(DashRoutine());
+                    m_audioSource.clip = m_dashSound;
+                    m_audioSource.Play();
                 }
                 break;
         }

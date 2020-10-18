@@ -14,6 +14,8 @@ public class Powerup : MonoBehaviour
     public GameObject spriteObject;
     public float m_rechargeTime = 5.0f;
 
+    public AudioSource m_audioSource;
+
     private void Start() {
         m_ready = true;
     }
@@ -37,6 +39,7 @@ public class Powerup : MonoBehaviour
                 m_ready = false;
                 spriteObject.SetActive(false);
                 StartCoroutine(Recharge());
+                m_audioSource.Play();
             }
         }
     }
