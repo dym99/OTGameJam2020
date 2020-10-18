@@ -152,7 +152,7 @@ public class Player : MonoBehaviour
     }
 
     public void FixedUpdate() {
-        Collider2D other = Physics2D.OverlapBox(new Vector2(this.transform.position.x, this.transform.position.y) + Vector2.down * 0.55f, new Vector2(0.8f, 0.05f), 0, LayerMask.GetMask("World"));
+        Collider2D other = Physics2D.OverlapBox(new Vector2(this.transform.position.x, this.transform.position.y) + Vector2.down * 0.55f, new Vector2(0.8f, 0.05f), 0, LayerMask.GetMask("World", "Bubble"));
         if (other) {
             m_grounded = true;
         } else {
