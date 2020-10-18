@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/JamAssets/Scenes/Levels/Level2.unity
     guid: aea70afc389050043a3cc3d4cdaae144
+  - enabled: 1
+    path: Assets/JamAssets/Scenes/Levels/Level3.unity
+    guid: 411f378712db7bd409a393bdbe2d26dd
+  - enabled: 1
+    path: Assets/JamAssets/Scenes/Levels/Level4.unity
+    guid: 3a3a11170f5ec024baba3b60a2cc88b1
   m_configObjects: {}

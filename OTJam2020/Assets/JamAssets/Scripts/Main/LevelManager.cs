@@ -31,7 +31,6 @@ public class LevelManager : MonoBehaviour
 
     public void ScorePoints(int points) {
         __levelScore += points;
-        GameManager.instance.totalScore += points;
     }
 
     public void NextLevel() {
@@ -58,6 +57,7 @@ public class LevelManager : MonoBehaviour
     }
 
     public void Victory() {
+        GameManager.instance.totalScore += levelScore;
         m_victoryPanel.SetActive(true);
     }
 }

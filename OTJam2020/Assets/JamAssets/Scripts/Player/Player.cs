@@ -8,6 +8,10 @@ public class Player : MonoBehaviour
     public Rigidbody2D m_rigidBody;
     public SpriteRenderer m_sprite;
     public Animator m_animator;
+    public Animator m_wingAnimator;
+    public Animator m_lightningAnimator;
+    public Indicator m_wingdicator;
+    public Indicator m_dashIndicator;
 
     public AudioSource m_audioSource;
 
@@ -50,7 +54,15 @@ public class Player : MonoBehaviour
 
     public void Update() {
         m_xSpeedTarget = Input.GetAxis("Horizontal") * m_maxSpeed;
+        if (m_hasDoubleJump) {
+            m_wingAnimator.gameObject.SetActive(true);
+        }
+        if (m_hasDash) {
+            m_lightningAnimator.gameObject.SetActive(true);
+        }
 
+        m_wingdicator.wallSliding = (m_state==PlayerState.WALLSLIDE);
+        m_dashIndicator.wallSliding = m_wingdicator.wallSliding;
         switch (m_state) {
             case PlayerState.NORMAL:
                 if (Input.GetButtonDown("Jump")) {
@@ -68,6 +80,7 @@ public class Player : MonoBehaviour
                             m_animator.SetTrigger("Jump");
                             m_audioSource.clip = m_jumpSound;
                             m_audioSource.Play();
+                            m_wingAnimator.SetTrigger("Flap");
                         }
                     }
                     m_rigidBody.velocity = vel;
@@ -84,6 +97,7 @@ public class Player : MonoBehaviour
                         StartCoroutine(DashRoutine());
                         m_audioSource.clip = m_dashSound;
                         m_audioSource.Play();
+                        m_lightningAnimator.SetTrigger("Dash");
                     }
                 }
                 break;
@@ -117,6 +131,7 @@ public class Player : MonoBehaviour
                     StartCoroutine(DashRoutine());
                     m_audioSource.clip = m_dashSound;
                     m_audioSource.Play();
+                    m_lightningAnimator.SetTrigger("Dash");
                 }
                 break;
         }
