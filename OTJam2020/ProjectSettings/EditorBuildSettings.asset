@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/JamAssets/Scenes/MainMenu.unity
     guid: 3a99e72323c96a2458938157f4507c57
   - enabled: 1
-    path: Assets/JamAssets/Scenes/TestScene.unity
-    guid: 0104493804236544099b7787b25fd9cd
-  - enabled: 1
     path: Assets/JamAssets/Scenes/Levels/Level1.unity
     guid: 131432351b3b67b4998adf38d5da99c3
   - enabled: 1
@@ -32,4 +29,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/JamAssets/Scenes/Levels/Level7.unity
     guid: b7950a9c361ed024fae8213139d86387
+  - enabled: 1
+    path: Assets/JamAssets/Scenes/Levels/Level8.unity
+    guid: e693617f752f81443866367c8bc06aab
+  - enabled: 1
+    path: Assets/JamAssets/Scenes/Levels/Level9.unity
+    guid: 8f1bcbc8bcd517d469ff6599230e3f4c
+  - enabled: 1
+    path: Assets/JamAssets/Scenes/Levels/Level10.unity
+    guid: 44e59d4cc8ca07946959024c53422b69
+  - enabled: 1
+    path: Assets/JamAssets/Scenes/GameEnd.unity
+    guid: 49e4dd81e0641274b93c30438eafc5a9
   m_configObjects: {}
