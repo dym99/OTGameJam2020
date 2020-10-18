@@ -44,8 +44,19 @@ public class Player : MonoBehaviour
         DASHING,
         WALLSLIDE,
         WALLDASHING,
+
+        DEAD
     }
     private PlayerState m_state;
+
+    public void Die() {
+        m_state = PlayerState.DEAD;
+        m_animator.SetTrigger("Dead");
+    }
+    
+    public void OnDieFinish() {
+        LevelManager.currentLevel.ResetLevel();
+    }
 
     public void Awake() {
         m_xSpeedTarget = 0.0f;
@@ -133,6 +144,9 @@ public class Player : MonoBehaviour
                     m_audioSource.Play();
                     m_lightningAnimator.SetTrigger("Dash");
                 }
+                break;
+            case PlayerState.DEAD:
+                m_rigidBody.velocity = Vector2.zero-Physics2D.gravity*Time.fixedDeltaTime;
                 break;
         }
     }
