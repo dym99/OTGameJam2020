@@ -394,6 +394,7 @@ MonoBehaviour:
   m_audioSource: {fileID: 6976403292739247507}
   m_jumpSound: {fileID: 8300000, guid: fdf82eef687b5a44aaf74be7e1878256, type: 3}
   m_dashSound: {fileID: 8300000, guid: df420180ee9e8fe4fa195cb64fa6d70b, type: 3}
+  m_deathSound: {fileID: 8300000, guid: bd4c65365dd1d8e48874ae3df59db07c, type: 3}
   m_maxSpeed: 6
   m_acceleration: 24
   m_jumpSpeed: 9.5

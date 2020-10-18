@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7523647363569369662}
   - component: {fileID: 248044938}
   - component: {fileID: 248044937}
+  - component: {fileID: 7695229794673011290}
   m_Layer: 0
   m_Name: GDRed
   m_TagString: Untagged
@@ -141,3 +142,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &7695229794673011290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523647363569369663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0e092cf6b1498240833bf283533d429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_coinEffect: {fileID: 3162921145729958982, guid: cb49b363685974c4d8aafba478d39f74,
+    type: 3}
+  m_points: 4000

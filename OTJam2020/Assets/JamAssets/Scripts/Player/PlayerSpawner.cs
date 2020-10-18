@@ -11,5 +11,8 @@ public class PlayerSpawner : MonoBehaviour
     public void SpawnPlayer() {
         GameObject go = Instantiate(m_playerPrefab);
         go.transform.position = m_spawnPoint.position;
+        if (CameraRig.current) {
+            CameraRig.current.player = go.transform;
+        }
     }
 }

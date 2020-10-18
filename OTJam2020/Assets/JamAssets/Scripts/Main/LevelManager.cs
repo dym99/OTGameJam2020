@@ -88,5 +88,6 @@ public class LevelManager : MonoBehaviour
         GameManager.instance.totalScore += levelScore;
         m_victoryPanel.SetActive(true);
         m_finished = true;
+        Destroy(CameraRig.current);
     }
 }

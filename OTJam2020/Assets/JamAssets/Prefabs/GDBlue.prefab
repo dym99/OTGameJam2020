@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7153019668130878772}
   - component: {fileID: 305148862}
   - component: {fileID: 305148861}
+  - component: {fileID: 8161350336522311901}
   m_Layer: 0
   m_Name: GDBlue
   m_TagString: Untagged
@@ -141,3 +142,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &8161350336522311901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7153019668130878773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0e092cf6b1498240833bf283533d429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_coinEffect: {fileID: 3162921145729958982, guid: 1b2b222fc30fe96468393afa3de31eda,
+    type: 3}
+  m_points: 4000

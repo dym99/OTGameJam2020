@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8347416192333637290}
   - component: {fileID: 1688869121}
   - component: {fileID: 1688869120}
+  - component: {fileID: 4920066932047659874}
   m_Layer: 0
   m_Name: GDYellow
   m_TagString: Untagged
@@ -141,3 +142,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &4920066932047659874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8347416192333635925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0e092cf6b1498240833bf283533d429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_coinEffect: {fileID: 3162921145729958982, guid: d949bf952d8edc746bf5701501a9b563,
+    type: 3}
+  m_points: 4000

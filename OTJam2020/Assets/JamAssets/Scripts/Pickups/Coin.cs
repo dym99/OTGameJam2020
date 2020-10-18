@@ -6,6 +6,7 @@ public class Coin : MonoBehaviour
 {
     public GameObject m_coinEffect;
 
+    public int m_points = 1000;
 
     private void OnTriggerEnter2D(Collider2D other) {
         Player player = null;
@@ -14,7 +15,7 @@ public class Coin : MonoBehaviour
             go.transform.position = this.transform.position;
             Destroy(go, 1.0f);
             Destroy(this.gameObject);
-            LevelManager.currentLevel.ScorePoints(1000);
+            LevelManager.currentLevel.ScorePoints(m_points);
         }
     }
 }

@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
 
     public AudioClip m_jumpSound;
     public AudioClip m_dashSound;
+    public AudioClip m_deathSound;
 
     public float m_maxSpeed = 6.0f;
     public float m_acceleration = 24.0f;
@@ -52,6 +53,8 @@ public class Player : MonoBehaviour
     public void Die() {
         m_state = PlayerState.DEAD;
         m_animator.SetTrigger("Dead");
+        m_audioSource.clip = m_deathSound;
+        m_audioSource.Play();
     }
     
     public void OnDieFinish() {
